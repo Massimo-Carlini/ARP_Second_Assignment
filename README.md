@@ -16,12 +16,12 @@ To compile the whole simulation is provided a shell script runnable by:
 To work properly you need to have installed the *libbitmap* library. *libbitmap* is a library to create and interact with simple bitmap object.
 
 IF YOU HAVEN'T INSTALED THIS LIBRARY FOLLOW THESE STEPS:
-1. Download the source code from [this GitHub repo](https://github.com/draekko/libbitmap.git) in your file system.
-2. Navigate to the root directory of the downloaded repo and run the configuration through command ```./configure```. Configuration might take a while.  While running, it prints some messages telling which features it is checking for.
-3. Type ```make``` to compile the package.
-4. Run ```make install``` to install the programs and any data files and documentation.
-5. Upon completing the installation, check that the files have been properly installed by navigating to ```/usr/local/lib```, where you should find the ```libbmp.so``` shared library ready for use.
-6. In order to properly compile programs which use the *libbitmap* library, you first need to notify the **linker** about the location of the shared library. To do that, you can simply add the following line at the end of your ```.bashrc``` file:      
+* Download the source code from [this GitHub repo](https://github.com/draekko/libbitmap.git) in your file system.
+* Navigate to the root directory of the downloaded repo and run the configuration through command ```./configure```. Configuration might take a while.  While running, it prints some messages telling which features it is checking for.
+* Type ```make``` to compile the package.
+* Run ```make install``` to install the programs and any data files and documentation.
+* Upon completing the installation, check that the files have been properly installed by navigating to ```/usr/local/lib```, where you should find the ```libbmp.so``` shared library ready for use.
+* In order to properly compile programs which use the *libbitmap* library, you first need to notify the **linker** about the location of the shared library. To do that, you can simply add the following line at the end of your ```.bashrc``` file:      
 ```export LD_LIBRARY_PATH="/usr/local/lib:$LD_LIBRARY_PATH"```
 
 Then you can run the simulation buy running directly the master process or running this code:
@@ -34,16 +34,16 @@ Then you can run the simulation buy running directly the master process or runni
 ## User Guide
 ----------------------
 The user, after having followed the instructions to compile the code, will see the simulation of the project. 
-1. The simulation will open two windows: one for the moving image simulation and one for the position trace of the center of the image.
-    1. In the first window, you will see a spot that you can move around using the arrow keys. This simulates the movement of a video camera.
-    2. In the second window, you will see a point that represents the center of the image in the first window. The position of this point will change as you move the spot in the first window.
-	3. As you move the spot around, the center of the image will be updated and the point in the second window will change its position accordingly.
+* The simulation will open two windows: one for the moving image simulation and one for the position trace of the center of the image.
+	* In the first window, you will see a spot that you can move around using the arrow keys. This simulates the movement of a video camera.
+	* In the second window, you will see a point that represents the center of the image in the first window. The position of this point will change as you move the spot in the first window.
+	* As you move the spot around, the center of the image will be updated and the point in the second window will change its position accordingly.
 
-2. Pressing an array key you can move the object that simulates the movement of a video camera, instead by clicking on the relative button (P) using your mouse you can save a snapshot of the image memory in a .bmp file in the "out" directory.
-    1. This function is useful for saving a specific frame of the simulation.
-	2. Each time a snapshot is taken, the file will be saved with a different name, starting from 0.
+* Pressing an array key you can move the object that simulates the movement of a video camera, instead by clicking on the relative button (P) using your mouse you can save a snapshot of the image memory in a .bmp file in the "out" directory.
+    * This function is useful for saving a specific frame of the simulation.
+	* Each time a snapshot is taken, the file will be saved with a different name, starting from 0.
 
-3. To stop the simulation, press "Ctrl + C" in the terminal, this will stop the execution of the program and close all open windows.
+* To stop the simulation, press "Ctrl + C" in the terminal, this will stop the execution of the program and close all open windows.
 
 
 
@@ -74,8 +74,3 @@ The user, after having followed the instructions to compile the code, will see t
 	    * The mvaddch function is used to update the position of a circle on the screen in real-time as the user moves the camera.
         * The refresh function is used to update the window and display the changes made.
 	    * The endwin function is used to end the ncurses session and restore the terminal to its original state.
-
-
-
-
-
